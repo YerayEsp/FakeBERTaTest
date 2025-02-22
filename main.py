@@ -60,7 +60,7 @@ tokenizer, model = model_loader(model_name)
 st.write('Welcome to FakeBERTa!')
 
 
-label = 'Introduce News to analyze:\n'
+label = 'Please introduce a news article to analyze:\n'
 news = st.text_input(label)
 
 if news:
@@ -70,6 +70,6 @@ if news:
     prediction = predict_news(tokenizer, model, news_chunks)
 
     if prediction == 0:
-                st.write("The news is **FAKE**.")
+                st.write("The article is **fake**.")
     else:
-                st.write("The news is **REAL**.")
+                st.write("The article is **real**.")
