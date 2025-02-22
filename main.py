@@ -58,7 +58,8 @@ def predict_news(tokenizer, model, news_chunks):
 model_name = "YerayEsp/FakeBERTa"
 tokenizer, model = model_loader(model_name)
 st.write('**Welcome to FakeBERTa v.1.0.0!**')
-st.markdown("<h3 style='color:red;'>Please note: FakeBERTa only accepts news in English.</h3>", unsafe_allow_html=True)
+st.markdown("<h4 style='color:red;'>Please note: FakeBERTa only accepts news in English.</h4>", unsafe_allow_html=True)
+
 
 
 label = 'Please introduce a news article to analyze:\n'
