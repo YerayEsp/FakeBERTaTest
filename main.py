@@ -80,6 +80,6 @@ if news:
     prediction = predict_news(tokenizer, model, news_chunks)
 
     if prediction == 0:
-                animated_text("The article is **fake**.",0.1)
+                animated_text("The article is fake.",0.1)
     else:
-                animated_text("The article is **real**.",0.1)
+                animated_text("The article is real.",0.1)
