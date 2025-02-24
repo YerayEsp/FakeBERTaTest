@@ -53,7 +53,11 @@ def predict_news(tokenizer, model, news_chunks):
 
     return prediction
 
-
+def animated_text(text, speed=0.05):
+    placeholder = st.empty()  
+    for char in text:
+        placeholder.text(placeholder.text() + char)  
+        time.sleep(speed)  
 
 model_name = "YerayEsp/FakeBERTa"
 tokenizer, model = model_loader(model_name)
@@ -72,6 +76,6 @@ if news:
     prediction = predict_news(tokenizer, model, news_chunks)
 
     if prediction == 0:
-                st.write("The article is **fake**.")
+                animated_text("The article is **fake**.")
     else:
-                st.write("The article is **real**.")
+                animated_text("The article is **real**.")
