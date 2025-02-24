@@ -55,9 +55,12 @@ def predict_news(tokenizer, model, news_chunks):
 
 def animated_text(text, speed=0.01):
     placeholder = st.empty()  
+    accumulated_text = "" 
     for char in text:
-        placeholder.text(placeholder.text() + char)  
+        accumulated_text += char  
+        placeholder.text(accumulated_text)  
         time.sleep(speed)  
+
 
 model_name = "YerayEsp/FakeBERTa"
 tokenizer, model = model_loader(model_name)
