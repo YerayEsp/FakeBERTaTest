@@ -53,7 +53,7 @@ def predict_news(tokenizer, model, news_chunks):
 
     return prediction
 
-def animated_text(text, speed=0.05):
+def animated_text(text, speed=0.55):
     placeholder = st.empty()  
     for char in text:
         placeholder.text(placeholder.text() + char)  
