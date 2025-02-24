@@ -64,7 +64,7 @@ def animated_text(text, speed=0.01):
 
 model_name = "YerayEsp/FakeBERTa"
 tokenizer, model = model_loader(model_name)
-st.write('**Welcome to FakeBERTa v.1.0.0!**')
+st.write('**Welcome to FakeBERTa v.1.0.1!**')
 st.markdown("<h4 style='color:red;'>Please note: FakeBERTa only accepts news in English.</h4>", unsafe_allow_html=True)
 
 
